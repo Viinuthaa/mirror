@@ -6,14 +6,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    color: #171717;
+    background: #0b1020;
+    color: #f5f7ff;
     min-height: 100vh;
 }
 
 header {
+    padding: 45px 20px 30px;
     text-align: center;
-    padding: 50px 20px 35px;
 }
 
 header h1 {
@@ -22,7 +22,7 @@ header h1 {
 }
 
 header p {
-    color: #666;
+    color: #8b95ad;
 }
 
 main {
@@ -34,15 +34,15 @@ main {
 .editor,
 .preview,
 .checks {
-    background: white;
-    padding: 25px;
+    background: #11182b;
+    border: 1px solid #26304a;
     border-radius: 12px;
+    padding: 25px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 19px;
     margin-bottom: 15px;
 }
 
@@ -50,15 +50,17 @@ textarea {
     width: 100%;
     height: 220px;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #303b58;
     border-radius: 8px;
     resize: vertical;
+    background: #0b1020;
+    color: #f5f7ff;
     font: 14px monospace;
     outline: none;
 }
 
 textarea:focus {
-    border-color: #555;
+    border-color: #4f8cff;
 }
 
 button {
@@ -66,13 +68,13 @@ button {
     padding: 11px 20px;
     border: 0;
     border-radius: 7px;
-    background: #171717;
+    background: #4f8cff;
     color: white;
     cursor: pointer;
 }
 
 button:hover {
-    background: #333;
+    background: #3d73d9;
 }
 
 .preview-header {
@@ -93,13 +95,13 @@ button:hover {
 .view-btn {
     margin: 0;
     padding: 8px 12px;
-    background: #eee;
-    color: #171717;
+    background: #1b243b;
+    color: #aeb8ce;
 }
 
 .view-btn.active {
-    background: #171717;
-    color: white;
+    background: #22d3ee;
+    color: #0b1020;
 }
 
 .preview-frame {
@@ -107,7 +109,7 @@ button:hover {
     justify-content: center;
     margin-top: 15px;
     padding: 20px;
-    background: #eee;
+    background: #0b1020;
     border-radius: 8px;
     overflow-x: auto;
 }
@@ -117,10 +119,13 @@ button:hover {
     min-height: 300px;
     padding: 20px;
     background: white;
-    border: 1px solid #aaa;
-    border-radius: 8px;
+    color: #171717;
+    border-radius: 6px;
     overflow: auto;
-    transition: width 0.3s ease;
+}
+
+#issues {
+    margin-top: 15px;
 }
 
 @media (max-width: 700px) {
@@ -133,8 +138,8 @@ button:hover {
     }
 
     .preview-header {
-        align-items: flex-start;
         flex-direction: column;
+        align-items: flex-start;
         gap: 12px;
     }
 
