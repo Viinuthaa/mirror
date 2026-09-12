@@ -1,0 +1,1 @@
+console.log("Mirror is ready.");
