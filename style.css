@@ -114,14 +114,13 @@ button:hover {
     overflow-x: auto;
 }
 
-#previewArea {
+#previewFrame {
     width: 100%;
-    min-height: 300px;
-    padding: 20px;
-    background: white;
-    color: #171717;
+    height: 350px;
+    border: 0;
     border-radius: 6px;
-    overflow: auto;
+    background: #eef4ff;
+    transition: width 0.3s ease;
 }
 
 #issues {
