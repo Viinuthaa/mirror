@@ -3,6 +3,7 @@ const previewBtn = document.getElementById("previewBtn");
 const previewFrame = document.getElementById("previewFrame");
 
 const viewButtons = document.querySelectorAll(".view-btn");
+const stressButtons = document.querySelectorAll(".stress-btn");
 const checkStatus = document.getElementById("checkStatus");
 const issues = document.getElementById("issues");
 
@@ -20,6 +21,34 @@ viewButtons.forEach(button => {
             button.dataset.width === "100%"
                 ? "100%"
                 : button.dataset.width + "px";
+    };
+});
+
+stressButtons.forEach(button => {
+    button.onclick = () => {
+        button.classList.toggle("active");
+
+        const document = previewFrame.contentDocument;
+        let style = document.getElementById("mirror-styles");
+
+        if (!style) {
+            style = document.createElement("style");
+            style.id = "mirror-styles";
+            document.head.appendChild(style);
+        }
+
+        const modes = {
+            "large-text": "body { font-size: 20px !important; }",
+            "reduced-motion": "* { animation: none !important; transition: none !important; }",
+            "high-contrast": "body { filter: contrast(1.5); }"
+        };
+
+        const activeModes = [...stressButtons]
+            .filter(btn => btn.classList.contains("active"))
+            .map(btn => modes[btn.dataset.mode])
+            .join("");
+
+        style.textContent = activeModes;
     };
 });
 
@@ -68,7 +97,7 @@ function checkUI() {
         problems++;
     }
 
-    if (headings.length === 0) {
+    if (!headings.length) {
         addIssue("Page is missing a main heading.");
         problems++;
     }

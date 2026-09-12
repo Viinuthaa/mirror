@@ -8,45 +8,46 @@
 </head>
 <body>
 
-    <header>
-        <h1>Mirror</h1>
-        <p>Frontend UI stress-testing tool</p>
-    </header>
+<header>
+    <h1>Mirror</h1>
+    <p>Frontend UI stress-testing tool</p>
+</header>
 
-    <main>
-        <section class="editor">
-            <h2>Your HTML</h2>
+<main>
+    <section class="editor">
+        <h2>Your HTML</h2>
+        <textarea id="htmlInput" placeholder="Paste your HTML here..."></textarea>
+        <button id="previewBtn">Preview</button>
+    </section>
 
-            <textarea id="htmlInput" placeholder="Paste your HTML here..."></textarea>
-
-            <button id="previewBtn">Preview</button>
-        </section>
-
-        <section class="preview">
-            <div class="preview-header">
-                <h2>Preview</h2>
-
-                <div class="view-controls">
-                    <button class="view-btn active" data-width="100%">Desktop</button>
-                    <button class="view-btn" data-width="768">Tablet</button>
-                    <button class="view-btn" data-width="375">Mobile</button>
-                </div>
+    <section class="preview">
+        <div class="preview-header">
+            <h2>Preview</h2>
+            <div class="view-controls">
+                <button class="view-btn active" data-width="100%">Desktop</button>
+                <button class="view-btn" data-width="768">Tablet</button>
+                <button class="view-btn" data-width="375">Mobile</button>
             </div>
+        </div>
 
-            <div class="preview-frame">
-                <iframe id="previewFrame" sandbox="allow-same-origin"></iframe>
-            </div>
-        </section>
+        <div class="stress-controls">
+            <button class="stress-btn" data-mode="large-text">Large Text</button>
+            <button class="stress-btn" data-mode="reduced-motion">Reduced Motion</button>
+            <button class="stress-btn" data-mode="high-contrast">High Contrast</button>
+        </div>
 
-        <section class="checks">
-            <h2>UI Checks</h2>
+        <div class="preview-frame">
+            <iframe id="previewFrame" sandbox="allow-same-origin"></iframe>
+        </div>
+    </section>
 
-            <p id="checkStatus">No scan run yet.</p>
+    <section class="checks">
+        <h2>UI Checks</h2>
+        <p id="checkStatus">No scan run yet.</p>
+        <div id="issues"></div>
+    </section>
+</main>
 
-            <div id="issues"></div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

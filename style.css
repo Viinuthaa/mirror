@@ -87,21 +87,28 @@ button:hover {
     margin-bottom: 0;
 }
 
-.view-controls {
+.view-controls,
+.stress-controls {
     display: flex;
     gap: 6px;
 }
 
-.view-btn {
+.view-btn,
+.stress-btn {
     margin: 0;
     padding: 8px 12px;
     background: #1b243b;
     color: #aeb8ce;
 }
 
-.view-btn.active {
+.view-btn.active,
+.stress-btn.active {
     background: #22d3ee;
     color: #0b1020;
+}
+
+.stress-controls {
+    margin-top: 15px;
 }
 
 .preview-frame {
@@ -120,7 +127,6 @@ button:hover {
     border: 0;
     border-radius: 6px;
     background: #eef4ff;
-    transition: width 0.3s ease;
 }
 
 #issues {
@@ -142,11 +148,14 @@ button:hover {
         gap: 12px;
     }
 
-    .view-controls {
+    .view-controls,
+    .stress-controls {
         width: 100%;
+        flex-wrap: wrap;
     }
 
-    .view-btn {
+    .view-btn,
+    .stress-btn {
         flex: 1;
     }
 }
