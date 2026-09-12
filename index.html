@@ -8,7 +8,34 @@
 </head>
 <body>
 
-    <h1>Mirror</h1>
+    <header>
+        <h1>Mirror</h1>
+        <p>Frontend UI stress-testing tool</p>
+    </header>
+
+    <main>
+        <section class="editor">
+            <h2>Your HTML</h2>
+
+            <textarea id="htmlInput" placeholder="Paste your HTML here..."></textarea>
+
+            <button id="previewBtn">Preview</button>
+        </section>
+
+        <section class="preview">
+            <h2>Preview</h2>
+
+            <div id="previewArea"></div>
+        </section>
+
+        <section class="checks">
+            <h2>UI Checks</h2>
+
+            <p id="checkStatus">No scan run yet.</p>
+
+            <div id="issues"></div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
