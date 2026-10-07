@@ -4,6 +4,8 @@
 
 Mirror lets developers preview HTML at different screen sizes and check for common UI and accessibility issues.
 
+![Mirror Preview](./screenshot.png)
+
 ## Features
 
 - HTML preview
